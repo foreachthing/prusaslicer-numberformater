@@ -3,6 +3,8 @@ Reformat all numbers in PrusaSlicers' GCode.
 
 Reformat from .2 to 0.2. This script will add zeros before the decimal point. 
 
+See PrusaSlicer issue: https://github.com/prusa3d/PrusaSlicer/issues/6996
+
 ### Note
 It will reformat _all_ numbers found in the gcode file.
 
