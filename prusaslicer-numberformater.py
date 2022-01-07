@@ -3,9 +3,9 @@
     Example: replace .05 with 0.05
 
     Add that script to the post processing section of PrusaSlicer.
-    Maybe so: 
-    "C:\Users\USERNAME\AppData\Local\Programs\Python\Python39\python.exe" "C:\dev\prusaslicer-numberformater.py";
-
+    Maybe so:
+    "C:/Users/USERNAME/AppData/Local/Programs/Python/Python39/python.exe"
+        "C:/dev/prusaslicer-numberformater.py";
 """
 
 import sys
@@ -14,7 +14,7 @@ import decimal
 from decimal import Decimal
 
 SOURCEFILE = sys.argv[1]
-REGEX = r"-?\d*\.?\d+"
+REGEX = r"[+-]?\d*\.?\d+(?:[Ee][+-]?\d+)?"
 
 def main(sourcefile):
     """
@@ -32,12 +32,12 @@ def main(sourcefile):
     # Replace ALL(!!!) the numbers with format_number().
     with open(sourcefile, "w", newline='\n', encoding='UTF-8') as writefile:
         # loop over gcode file in memory
-        for i, strline in enumerate(lines):
+        for _, strline in enumerate(lines):
             # Find ALL numbers
             matches = re.finditer(REGEX, strline, re.MULTILINE)
-            for matchNum, match in enumerate(matches, start=1):
+            for _, match in enumerate(matches, start=1):
                 # Replace each number with the correct formatted number
-                strline = strline.replace(match.group(), format_number( match.group()))
+                strline = strline.replace(match.group(), format_number(match.group()))
             # Write line back to file
             writefile.write(strline)
 
@@ -72,6 +72,3 @@ def format_number(num):
 
 
 main(SOURCEFILE)
-
-
-
