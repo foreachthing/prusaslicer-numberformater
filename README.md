@@ -1,4 +1,4 @@
-# PrusaSlicer-numberformater
+# PrusaSlicer-numberformatter
 Reformat all numbers in PrusaSlicers' GCode. 
 
 Reformat from .2 to 0.2. This script will add zeros before the decimal point. 
@@ -15,4 +15,4 @@ _Left_ after and _right_ before the script has run.
 ## Installation
 Add that script to the post processing section of PrusaSlicer.
 Maybe so: 
-"C:\Users\USERNAME\AppData\Local\Programs\Python\Python39\python.exe" "C:\dev\prusaslicer-numberformater.py";
+"C:\Users\USERNAME\AppData\Local\Programs\Python\Python39\python.exe" "C:\dev\prusaslicer-numberformatter.py";
