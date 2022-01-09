@@ -10,7 +10,7 @@ It will reformat _all_ numbers found in the gcode file.
 
 ![image](https://user-images.githubusercontent.com/10420187/148681885-d3729649-419c-42be-98b1-9b5a87cd4cb0.png)
 
-_Left_ before and _right_ after the script has run.
+_Left_ after and _right_ before the script has run.
 
 ## Installation
 Add that script to the post processing section of PrusaSlicer.
